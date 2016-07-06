@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dip">
+            <ImageView
+                android:id="@+id/iv_anim_obj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="20dip"
+                />
+        </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_apply"
+        android:gravity="center"
+        android:paddingBottom="12dp"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:text="Apply"
+        android:textColor="#000000" />
+
+            <TextView
+                android:text="========View动画========"
+                android:textColor="#FF000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view_anim_spinner"
+                />
+            <Button
+                android:id="@+id/btn_view_anim_run"
+                android:text="运行属性动画"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/obj_anim_spinner"
+        />
+    <Button
+        android:id="@+id/btn_obj_anim_run"
+        android:text="运行view动画"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_skip"
+        android:text="跳转到布局动画(layout animation)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_animate"
+        android:text="view自带aniamte动画"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

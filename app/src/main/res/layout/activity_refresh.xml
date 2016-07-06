@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<views.refreshlayout.RefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+        <views.refreshlayout.HeaderRefreshView
+            android:id="@+id/header_refreshview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </views.refreshlayout.HeaderRefreshView>
+        <views.refreshlayout.TopContentView2
+            android:layout_below="@+id/header_refreshview"
+            android:id="@+id/top_contentview"
+            android:layout_width="match_parent"
+            android:layout_height="300dip"
+            >
+        </views.refreshlayout.TopContentView2>
+        <views.refreshlayout.BottomContentView
+            android:id="@+id/bottom_contentview"
+            android:layout_below="@+id/top_contentview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#333333"
+            >
+        </views.refreshlayout.BottomContentView>
+</views.refreshlayout.RefreshLayout>

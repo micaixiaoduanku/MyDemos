@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="seekbarbg">#dddddd</color>
+    <color name="seekbar">#00bcb2</color>
+    <color name="yellow">#ffcd07</color>
+    <color name="write">#ffffff</color>
+    <color name="primary">#FF03A9F4</color>
+    <color name="primary_dark">#FF0288D1</color>
+    <color name="status_bar_color">@color/primary_dark</color>
+</resources>

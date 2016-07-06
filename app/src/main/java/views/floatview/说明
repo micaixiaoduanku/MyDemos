@@ -1,0 +1,5 @@
+Service onStartCommand 4个返回值
+START_STICKY:service被系统杀死,会重新创建,重新创建的时候intent为null
+START_NOT_STICKY:service被系统杀死,不会重新创建
+START_REDELIVER_INTENT:service被系统杀死,会重新创建,重新创建的时候intent为之前的
+START_STICKY_COMPATIBILITY:START_NOT_STICKY的兼容版本，service被系统杀死,不保证会重新创建（一般不常用）

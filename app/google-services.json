@@ -1,0 +1,87 @@
+{
+  "project_info": {
+    "project_number": "546266329662",
+    "project_id": "mydemo-b0263"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546266329662:android:08acb2f151fe2295",
+        "android_client_info": {
+          "package_name": "com.example.huangli.mydemos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546266329662-9im8up9h8jjoc8h4rb23dltpn3atkune.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.huangli.mydemos",
+            "certificate_hash": "CCEF0D1DA20AF79438890D3CCAA28F8EF4B8134E"
+          }
+        },
+        {
+          "client_id": "546266329662-obpg64maem72fljig49iaont4nht0alm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACgoCKp85t86yVf0IYW485-43cc0u4y9U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546266329662:android:278d21d83e6d0096",
+        "android_client_info": {
+          "package_name": "com.example.huangli.mydemos.mine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546266329662-50laebvvegcr020va7kgfgp9n9793adt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.huangli.mydemos.mine",
+            "certificate_hash": "CCEF0D1DA20AF79438890D3CCAA28F8EF4B8134E"
+          }
+        },
+        {
+          "client_id": "546266329662-obpg64maem72fljig49iaont4nht0alm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACgoCKp85t86yVf0IYW485-43cc0u4y9U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

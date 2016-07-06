@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.huangli.mydemos" >
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY"></uses-permission>
+    <uses-permission android:name="com.example.huangli.mydemos.provider.READANDWRITE"></uses-permission>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
+
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB_UaN1G7JCjQ4JbjiAgnTQssW2GX0ouHE" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="bugs.EntranceActivityBugs" android:label="@string/app_name" ></activity>
+        <activity android:name="bugs.resolution.ResolutionActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="components.EntranceActivityConponent" android:label="@string/app_name" ></activity>
+        <activity android:name="bugs.duplicateid.MainActivityDuplicateid"  android:label="@string/app_name" ></activity>
+        <activity android:name="components.contentprovider_school.views.MainActivityStudents" android:label="@string/app_name" ></activity>
+        <activity android:name="components.notifaction.NotifactionActivity"></activity>
+        <activity android:name="views.EntranceActivityView" android:label="@string/app_name" ></activity>
+        <activity android:name="views.spannablestring.SpannableActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.floatview.FloatViewActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="logic.EntranceActivityLogic" android:label="@string/app_name" ></activity>
+        <activity android:name="logic.wifi.WifiPointsActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.customSeekbar.SeekBarActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="components.broadcast.BroadcastMainActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="logic.firewall.FireWallActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="logic.velocity.VelocityActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.waveview.WaweViewActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.windowdialog.WindowDialogActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.autoscroll.AutoScrollActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.autotextview.AutoTextActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="logic.file.FileTestActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="logic.social.SocialIntegratingActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.viewscroll.ViewScrollActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.drawer.DrawerActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.refreshlayout.RefreshActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.remoteViews.RemoteViewActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.drawables.DrawableActivity" android:label="@string/app_name" ></activity>
+        <activity android:name="views.surfaceview.SurFaceTestActivity"></activity>
+        <activity android:name="logic.backphoto.BackPhotoActivity"></activity>
+        <activity android:name="logic.reflect.ReflectActivity"></activity>
+        <activity android:name="views.animation.AnimationActivity"></activity>
+        <activity android:name="views.animation.LayoutAnimaActivity"></activity>
+        <activity android:name="views.translucentbar.TranslucentActivity"
+            ></activity>
+        <activity android:name="views.bitmap.BitmapActivity"></activity>
+        <activity android:name="views.constomview.CustomViewActivity"></activity>
+        <activity android:name="logic.switchlanguage.SwitchLanguageActivity"></activity>
+        <activity android:name="logic.ipc.IPCActivityMain"></activity>
+        <activity android:name="views.whewview.WhewviewActivity"></activity>
+        <activity android:name="logic.ipc.IPCActivitySecond"
+            android:process=":remote"
+            ></activity>
+        <activity android:name="com.facebook.FacebookActivity"
+                  android:configChanges=
+                      "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:label="@string/app_name" />
+        <provider
+            android:authorities="com.example.huangli.mydemos"
+            android:name="components.contentprovider_school.controls.MyContentProvider"
+            android:permission="com.example.huangli.mydemos.provider.READANDWRITE"
+            >
+        </provider>
+
+        <service
+            android:name="views.floatview.BackgroundService"
+            android:exported="false"
+            android:priority="1000" />
+        <service
+        android:name="views.windowdialog.HUD"
+        />
+        <service android:name="logic.ipc.MessengerService"></service>
+
+        <receiver android:name="components.broadcast.ConfigChangeReceiver">
+
+        </receiver>
+
+        <receiver android:name="views.remoteViews.MyAppWidgetProvider">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_provider_info"
+                ></meta-data>
+            <intent-filter>
+                <action android:name="views.remoteViews.action_CLICK"></action>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"></action>
+            </intent-filter>
+
+        </receiver>
+    </application>
+
+</manifest>

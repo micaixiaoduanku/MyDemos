@@ -1,0 +1,66 @@
+Content Provider：
+Content Provider存储数据并提供数据给其它应用
+
+Content Provider提供数据给外部应用程序表现为一张表，类似如下一张词典表格
+word	    app id	frequency	locale	_ID
+mapreduce	user1	100	        en_US	1
+precompiler	user14	200	        fr_FR	2
+applet	    user2	225	        fr_CA	3
+const	    user1	255	        pt_BR	4
+int	        user5	100 	    en_UK	5
+
+_ID属性由系统自动维护自动增长,也可以不需要主键,或者另外命名主键名字,但是如果需要和ListView配合展示查询结果就一定要使用_ID属性作为主键
+
+如果想访问ContentProvider中提供的数据，需要使用ContentResolver,它的方法和ContentProvider非常类似(提供了创建，获取，更新和删除的API，ContentProvider和ContentResolver之间属于进程
+间的相互通信.ContentProvider也可以看成一个数据存储和数据以表形式表现的抽象层。
+
+使用ContentProvider查询语句表现为
+// Queries the user dictionary and returns results
+mCursor = getContentResolver().query(
+    UserDictionary.Words.CONTENT_URI,   // The content URI of the words table
+    mProjection,                        // The columns to return for each row
+    mSelectionClause                    // Selection criteria
+    mSelectionArgs,                     // Selection criteria
+    mSortOrder);                        // The sort order for the returned rows
+
+Content URIs:通过指定一个url找到指定的table,一个示例：content://user_dictionary/words user_dictionary表示来源，words表示table路径
+
+如何从ContentProvider获取数据?
+1,申请权限
+具体的权限由ContentProvider提供者提供，ContentProvider如果要去使用ContentProvider提供的数据，要去Manifest中定义权限.
+2,定义查询规则，查询数据
+(1)定义Content URI
+(2)定义Projection
+示例：
+String[] mProjection =
+            {
+                    UserDictionary.Words._ID,    // Contract class constant for the _ID column name
+                    UserDictionary.Words.WORD,   // Contract class constant for the word column name
+                    UserDictionary.Words.LOCALE  // Contract class constant for the locale column name
+            };
+这意味这查询数据结果只会由_ID，WORD，LOCALE.
+(3)定义SelectionClause
+示例：
+String mSelectionClause = UserDictionary.Words.WORD + “ = ?”;
+(4)定义SelectionArgs
+示例：
+String[] mSelectionArgs = ｛“china”｝;
+(5)定义SortOrder
+
+ContentProvider提供的数据类型
+string
+integer
+long integer (long)
+floating point
+long floating point (double)
+
+另外三种访问ContentProvider的方法：
+（1）Batch access:批量插入数据
+（2）Asynchronous queries：异步查询
+（3）Data access via intents：通过发送intent去访问其它应用的contentprovider有两种方案，一是获得零时权限，二是在拥有权限的应用中进行操作。
+
+在ContentProvider中实现权限声明,以下范围优先级由低到高
+Single read-write provider-level permission
+Separate read and write provider-level permission
+Path-level permission
+Temporary permission
